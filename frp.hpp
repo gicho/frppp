@@ -283,7 +283,7 @@ public:
     template<typename F>
     constexpr auto map(F&& f) const {
         using R = std::invoke_result_t<F, T>;
-        return Behavior<R>([f, *this]() { return f(this->sample()); });
+        return Behavior<R>([f, self = this]() { return f(self->sample()); });
     }
 };
 
