@@ -13,6 +13,7 @@
 #define FRP_HPP
 
 #include <array>
+#include <cstddef>
 #include <concepts>
 #include <functional>
 #include <tuple>
